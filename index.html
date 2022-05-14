@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tasks</title>
+        <style>
+            body {
+                box-sizing: border-box;
+                top: 19px;
+            }
+            .container {
+                position: relative;
+                margin: 0;
+                left: 200px;
+                margin-left: 50px;
+                margin-right: 50px;
+                max-width: calc(100% - 600px);
+            }
+            @media (max-width: 1200px) {
+                .container {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    max-width: calc(100% -10%);
+                    min-width: 300px;
+                }
+            }
+            .form {
+                background-color: rgba(128, 128, 128, 0.552);
+                margin-top: 50px;
+                border-radius: 7px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            .input {
+                margin-top: 6px;
+                margin-bottom: 6px;
+                width: 70%;
+                height: 25px;
+                border-radius: 7px;
+                border: none;
+                font-size: 20px;
+                letter-spacing: 1.7px;
+            }
+            .add {
+                border: none;
+                border-radius: 8px;
+                background-color: rgba(250, 41, 149, 0.657);
+                color: black;
+                font-weight: bold;
+                margin-top: 4px;
+                margin-bottom: 4px;
+                height: 40px;
+                cursor: pointer;
+            }
+            .add:hover {
+                transform: translatey(-2px);
+                background-color: rgba(250, 41, 149, 1);
+                box-shadow: 0px 2px 3px black;
+            }
+            .tasks {
+                background-color: rgba(128, 128, 128, 0.552);
+                margin-top: 50px;
+                border-radius: 7px;
+                display: flex;
+                align-items: center;
+                min-height: 48px;
+                flex-wrap: wrap;
+            }
+            .task {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 4px;
+            }
+            .textdiv {
+                display: flex;
+                align-items: center;
+                color: indianred;
+                font-size: 24px;
+                font-weight: bold;
+                background-color: white;
+                width: calc(100% - 20%);
+                height: 44px;
+                border-radius: 8px;
+                margin-left: 4px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form">
+                <input type="text" class="input" />
+                <input type="submit" class="add" value="Add Task" />
+            </div>
+            <div class="tasks"></div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
